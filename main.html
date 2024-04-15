@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./src/output.css">
+    <title>Css variables</title>
+
+</head>
+<body>
+    <nav>
+        <span>
+            css variables
+        </span>
+    </nav>
+    <input class="bg-black fill-orange-900" type="range" id="range" value="10" min="10" max="100" onchange="updateValue()" >
+    <span>
+        <p id="inputvalue">%</p>
+    </span>
+
+
+    <input class="w-[200px] bg-black border-black" type="date" id="myage" onchange="mycorrectage()"/>
+    <span>
+        <p id="age"></p>
+    </span>
+</body>
+</html>
+<script>
+
+    function updateValue(){
+        valueFull=document.getElementById("range").value
+        if(valueFull>=90){
+            alert("age is greater the 90")
+        }
+        else{
+        document.getElementById("inputvalue").innerText=document.getElementById("range").value
+        }
+    }
+    function mycorrectage(){
+
+       let  Bd_age=document.getElementById("myage").value;
+    //    console.log(Bd_age)
+       document.getElementById("age").innerText=document.getElementById("myage").value;
+       let  birth_Age=new Date(Bd_age);
+       let today=new Date();
+       let age =today.getFullYear()-birth_Age.getFullYear();
+       console.log(age)
+
+        if(age>=25){
+            alert("your age is too enough work hard")
+        }
+        else{
+            // alert("less age")    
+        }
+    }
+</script>
