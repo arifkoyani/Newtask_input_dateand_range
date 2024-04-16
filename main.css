@@ -1,6 +1,6 @@
 :root{
     --mycolor:white;
-    --lastcolor:black;
+    --lastcolor:rgba(255, 166, 0, 0.989);
 }
 nav{
     width: 100%;
